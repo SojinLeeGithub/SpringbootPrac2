@@ -38,7 +38,6 @@ public class Validation {
     @NotBlank
     private String notBlank;
 
-
     // client로 부터 데이터를 받을 때는 기본형 데이터타입을 쓰기 않는게 좋음
     @NotNull
     // int 로 지정하면 0이 들어가서 Not null로 인정되지 않는다.
