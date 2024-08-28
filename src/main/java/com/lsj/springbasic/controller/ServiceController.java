@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.lsj.springbasic.service.BasicService;
 
+
 // import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
@@ -57,4 +58,6 @@ public class ServiceController {
             return basicService.getService();
         }
     
+  
+
     }

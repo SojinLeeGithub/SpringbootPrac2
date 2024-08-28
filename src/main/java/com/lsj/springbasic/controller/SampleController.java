@@ -10,6 +10,9 @@ import lombok.RequiredArgsConstructor;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -40,5 +43,20 @@ public class SampleController {
         return response;
 
     }
+
+    // 삭제 컨트롤러 만들기 (특정 경로로 들어오면 아래 코드가 실행 되게)
+    @DeleteMapping("/{sampleId}")
+    public ResponseEntity<String> deleteSample1(
+        @PathVariable("sampleId") String sampleId 
+    ) {
+        ResponseEntity<String> response = sampleService.deleteSample1(sampleId);
+        return response;
+    }
+
+          @GetMapping("")
+        public ResponseEntity<String> queryMethod() {
+            ResponseEntity<String> response = sampleService.queryString();
+            return response;
+        }
   
 }

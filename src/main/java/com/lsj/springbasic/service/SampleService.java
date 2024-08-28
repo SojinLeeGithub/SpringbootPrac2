@@ -7,6 +7,9 @@ import com.lsj.springbasic.dto.PostSample1RequestDto;
 // 실제 사용할 메서드 만들어야 함
 public interface SampleService {
 
+    // 서비스 호출하기
     ResponseEntity<String> postSample1 (PostSample1RequestDto dto);
+    ResponseEntity<String> deleteSample1 (String sampleId);
+    ResponseEntity<String> queryString();
     
 } 
