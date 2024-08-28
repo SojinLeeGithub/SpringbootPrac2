@@ -62,7 +62,23 @@ extends JpaRepository<SampleUserEntity, String> {
     @Query(value = "SELECT u FROM user u WHERE u.name = :name AND u.address = :address")
     List<SampleUserEntity> getJpq2(
         @Param("name") String name, 
-        @Param("address")String address); 
+        @Param("address")String address
+        ); 
+
+
+        // Native SQL: 
+        // - 현재 RDBMS의 SQL 문법을 그대로 사용하는 방법
+        // -@Query nativeQuery 속성을 반드시 true로 지정
+        @Query(value=
+        "SELECT * " +
+        "FROM sample_user " +
+        "WHERE name = :name " +
+        " AND address = :address"
+        , nativeQuery = true)
+        List<SampleUserEntity> getNativeSql(
+            @Param("name") String name,
+            @Param("address") String address
+        );
 }
 
 
