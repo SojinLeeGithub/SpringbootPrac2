@@ -20,7 +20,7 @@ extends JpaRepository<SampleUserEntity, String> {
     // Query Method:
     // - Repository의 메서드 선언시에 지정된 패턴에 따라 메서드명을 작성하면 JPA가 SQL을 만들어줌
     // findby = select * (테이블명)
-    // - findby : 필드명을 기준으로 컬럼을 모든 컬럼을 조회할 때 사용, findBy 뒤에 필드명을 붙여서 작성, 필드명의 첫글자는 대문자이어야함
+    // - findby : '필드명'을 기준으로 컬럼을 모든 컬럼을 조회할 때 사용, findBy 뒤에 필드명을 붙여서 작성, 필드명의 첫글자는 대문자이어야함
    
     // List<받을 Entity명>, 조회 될 기대값이 0~n이므로 List(배열)로 받는다. 
    List<SampleUserEntity> findByName(String name);  // = select * from sample_user where name 
