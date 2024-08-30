@@ -31,7 +31,6 @@ public class SampleController {
 
 
     @PostMapping("")    
-
     // 반환타입 별도 지정하는 어노테이션 @ResponseEntity<제너릭 타입>
     public ResponseEntity<String> postSample1(
         // valid = 유효성 검사 실행 어노테이션
@@ -65,6 +64,14 @@ public class SampleController {
         ) {
             String response = sampleService.getJwt(name);
             return response;
+        }
+
+        @PostMapping("/jwt")
+        public String validateJwt(
+            @RequestBody String jwt 
+        ) {
+             String response = sampleService.validateJwt(jwt);
+             return response;
         }
 
 }
