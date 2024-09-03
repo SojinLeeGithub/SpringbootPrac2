@@ -52,7 +52,7 @@ public class SampleController {
         return response;
     }
 
-          @GetMapping("")
+        @GetMapping("")
         public ResponseEntity<String> queryMethod() {
             ResponseEntity<String> response = sampleService.queryString();
             return response;
