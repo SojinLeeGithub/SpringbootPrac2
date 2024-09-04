@@ -9,13 +9,13 @@ import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.AbstractPasswordEncoder;
+// import org.springframework.security.crypto.password.AbstractPasswordEncoder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import com.lsj.springbasic.entity.SampleUserEntity;
+// import com.lsj.springbasic.entity.SampleUserEntity;
 import com.lsj.springbasic.provider.JwtProvider;
 import com.lsj.springbasic.repositoy.SampleUserRepository;
 
